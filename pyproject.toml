@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "art50pulse"
+version = "0.1.0"
+description = "EU AI Act Article 50 transparency pre-audit CLI (chatbot disclosure & C2PA markers)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "sysrqio" }]
+dependencies = []
+keywords = ["eu-ai-act", "article-50", "c2pa", "transparency", "compliance"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+art50pulse = "art50pulse.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["art50pulse*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
